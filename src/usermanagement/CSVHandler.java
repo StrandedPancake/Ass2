@@ -1,4 +1,5 @@
 package usermanagement;
+
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -11,7 +12,7 @@ public class CSVHandler {
     }
 
     public void writeUsersToCSV(List<User> users) {
-        try (PrintWriter writer = new PrintWriter(new File("C:/Users/samla/eclipse-workspace/AdvancedProgramming/SocialMediaAnalyzer3/posts.csv"))) {
+        try (PrintWriter writer = new PrintWriter(new File(csvFilePath))) {
             StringBuilder sb = new StringBuilder();
             sb.append("Username,Password,FirstName,LastName,UserType\n");
 
@@ -31,7 +32,7 @@ public class CSVHandler {
 
     public List<User> readUsersFromCSV() {
         List<User> users = new ArrayList<>();
-        try (BufferedReader br = new BufferedReader(new FileReader("C:/Users/samla/eclipse-workspace/AdvancedProgramming/SocialMediaAnalyzer3/posts.csv"))) {
+        try (BufferedReader br = new BufferedReader(new FileReader(csvFilePath))) {
             String line;
             boolean headerSkipped = false;
 
@@ -58,5 +59,21 @@ public class CSVHandler {
         }
 
         return users;
+    }
+
+    public void addUserToCSV(User newUser) {
+        try (FileWriter fileWriter = new FileWriter(csvFilePath, true);
+             BufferedWriter bufferedWriter = new BufferedWriter(fileWriter)) {
+            StringBuilder sb = new StringBuilder();
+            sb.append(newUser.getUsername()).append(",");
+            sb.append(newUser.getPassword()).append(",");
+            sb.append(newUser.getFirstName()).append(",");
+            sb.append(newUser.getLastName()).append(",");
+            sb.append(newUser.getUserType()).append("\n");
+
+            bufferedWriter.write(sb.toString());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
