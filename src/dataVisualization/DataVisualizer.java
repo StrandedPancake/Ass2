@@ -2,8 +2,7 @@ package dataVisualization;
 
 import javafx.scene.chart.PieChart;
 import java.util.List;
-
-import SocialMediaAnalyzer3.Post;
+import model.Post;  // Import the Post class from the model package
 
 public class DataVisualizer {
     public PieChart generatePieChart(List<Post> posts) {

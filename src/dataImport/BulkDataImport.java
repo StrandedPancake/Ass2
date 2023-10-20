@@ -3,8 +3,7 @@ package dataImport;
 import java.io.File;
 import java.io.IOException;
 import java.util.List;
-
-import SocialMediaAnalyzer3.Post;
+import model.Post;  // Import the Post class from the model package
 
 public class BulkDataImport {
     public List<Post> importDataFromCSV(File csvFile) throws IOException {

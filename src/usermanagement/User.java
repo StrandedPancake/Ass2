@@ -1,5 +1,7 @@
 package usermanagement;
 
+import model.Post;
+
 public class User {
     private String username;
     private String password;
@@ -55,4 +57,9 @@ public class User {
     public void setUserType(UserType userType) {
         this.userType = userType;
     }
+
+	public void addPost(Post newPost) {
+		// TODO Auto-generated method stub
+		
+	}
 }

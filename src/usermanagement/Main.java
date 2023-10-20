@@ -1,5 +1,8 @@
 package usermanagement;
 
+import usermanagement.UserProfileManager;
+import usermanagement.VIPManager;
+import usermanagement.UserFactory;
 import java.util.Scanner;
 import java.util.List;
 

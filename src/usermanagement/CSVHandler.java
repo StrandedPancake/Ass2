@@ -76,4 +76,9 @@ public class CSVHandler {
             e.printStackTrace();
         }
     }
+
+	public void writePosts(ArrayList arrayList) {
+		// TODO Auto-generated method stub
+		
+	}
 }

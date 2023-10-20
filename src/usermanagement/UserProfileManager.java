@@ -2,6 +2,7 @@ package usermanagement;
 
 import java.util.ArrayList;
 import java.util.List;
+import model.Post;
 
 public class UserProfileManager {
 	private List<User> users; // Declare the 'users' list as an instance variable
@@ -48,4 +49,18 @@ public class UserProfileManager {
     public List<User> getUsers() {
         return users;
     }
+
+	public void addPost(User user, String content, String author) {
+	    // Create a Post object with the provided content and author
+	    Post newPost = new Post(0, content, author, 0, 0, author);
+	    
+	    // Add the new post to the user's list of posts
+	    user.addPost(newPost);
+		
+	}
+
+	public User getCurrentUser() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }

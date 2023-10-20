@@ -1,4 +1,5 @@
-package SocialMediaAnalyzer3;
+package model;
+
 import java.util.Comparator;
 
 public class PostComparator implements Comparator<Post> {

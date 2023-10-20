@@ -1,10 +1,11 @@
-package SocialMediaAnalyzer3;
+package model;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import usermanagement.CSVHandler;
 
 public class SocialMediaAnalyzer {
     private Map<Integer, Post> posts;
@@ -48,7 +49,7 @@ public class SocialMediaAnalyzer {
 
     public List<Post> retrieveTopNPostsByShares(int n) {
         List<Post> allPosts = new ArrayList<>(posts.values());
-        Collections.sort (allPosts,new PostComparator(false));
+        Collections.sort(allPosts, new PostComparator(false));
         return allPosts.subList(0, Math.min(n, allPosts.size()));
     }
 

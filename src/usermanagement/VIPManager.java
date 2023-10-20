@@ -13,4 +13,3 @@ public class VIPManager{
         // Implement VIP-specific actions
     }
 }
-

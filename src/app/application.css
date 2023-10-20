@@ -1,0 +1,47 @@
+/* Set the background color of the root container */
+.root {
+    -fx-background-color: #f0f0f0;
+}
+
+/* Style for buttons */
+.button {
+    -fx-background-color: #3498db; /* Background color */
+    -fx-text-fill: white; /* Text color */
+    -fx-font-size: 14px; /* Font size */
+}
+
+/* Style for labels */
+.label {
+    -fx-font-size: 14px;
+}
+
+/* Style for text fields and password fields */
+.text-field, .password-field {
+    -fx-pref-height: 30px; /* Text field height */
+    -fx-font-size: 14px; /* Font size */
+}
+
+/* Style for dialog pane */
+.dialog-pane {
+    -fx-background-color: white; /* Background color of dialogs */
+}
+
+/* Style for dialog header */
+.dialog-pane .header-panel {
+    -fx-background-color: #3498db; /* Header background color */
+    -fx-text-fill: white; /* Header text color */
+    -fx-font-size: 16px; /* Header font size */
+}
+
+/* Style for dialog content */
+.dialog-pane .content-panel {
+    -fx-font-size: 14px; /* Content font size */
+}
+
+/* Style for the main application title */
+.title {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+}
+
+/* Customize your own styles as needed */

@@ -1,4 +1,5 @@
-package SocialMediaAnalyzer3;
+package model;
+
 public class Post {
     private int id;
     private String content;
@@ -19,28 +20,36 @@ public class Post {
     public int getId() {
         return id;
     }
+
     public String getContent() {
         return content;
     }
+
     public String getAuthor() {
         return author;
     }
+
     public int getLikes() {
         return likes;
     }
+
     public int getShares() {
         return shares;
     }
+
     public String getDateTime() {
         return dateTime;
     }
+
     public void setLikes(int likes) {
         this.likes = likes;
     }
+
     public void setShares(int shares) {
         this.shares = shares;
     }
-    
+
+    @Override
     public String toString() {
         return "ID: " + id +
                 ", Content: " + content +
@@ -49,4 +58,9 @@ public class Post {
                 ", Shares: " + shares +
                 ", Date and Time: " + dateTime;
     }
+
+	public String getCategory() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }
