@@ -1,6 +1,7 @@
 package usermanagement;
 
 import model.Post;
+import model.SocialMediaPost;
 
 public class User {
     private String username;
@@ -59,6 +60,15 @@ public class User {
     }
 
 	public void addPost(Post newPost) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public String getFullName() {
+	    return firstName + " " + lastName;
+	}
+
+	public void addSocialMediaPost(SocialMediaPost newPost) {
 		// TODO Auto-generated method stub
 		
 	}
